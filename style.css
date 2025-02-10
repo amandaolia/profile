@@ -1,0 +1,166 @@
+/* Estilo do Body */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('imagens/travel1.jpg'); /* Caminho para a imagem de fundo */
+  background-size: cover; /* A imagem vai cobrir todo o fundo da página */
+  background-position: center center; /* A imagem será centralizada */
+  color: #333; /* Cor do texto */
+  line-height: 1.6; /* Espaçamento entre as linhas */
+  margin: 0;
+  padding: 20px; /* Adiciona um espaçamento ao redor da página */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Faz o fundo cobrir toda a altura da tela */
+  text-align: center;
+  position: relative; /* Permite o uso de elementos posicionados dentro */
+  overflow: hidden; /* Evita que o conteúdo ultrapasse a área visível */
+}
+
+/* Camada de sombreado sobre a imagem de fundo */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  filter: blur(5px); /* Aplica o desfoque na imagem */
+}
+
+/* Estilo do Container */
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto; /* Centraliza o conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo das Imagens */
+.img-circle {
+  border-radius: 50%; /* Torna a imagem redonda */
+  margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave ao passar o mouse */
+}
+
+.img-circle:hover {
+  transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Estilo dos Títulos */
+h1, h2 {
+  color: #fff; /* Texto branco para destacar sobre o fundo */
+  font-family: 'Lora', serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+/* Estilo dos Cartões e outros elementos */
+.card-white {
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade para contrastar com o fundo */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+}
+
+.card-white:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo para Links */
+a {
+  color: #7a4b8d; /* Cor do link (mais suave, um tom de roxo) */
+  text-decoration: none; /* Remove sublinhado */
+  transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+a:hover {
+  color: #d0a7cc; /* Cor mais suave do link ao passar o mouse */
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilo para Botões */
+.btn-blue {
+  background-color: #7a4b8d; /* Cor de fundo do botão mais suave */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.btn-blue:hover {
+  background-color: #9e6ba1; /* Cor mais suave de hover para o botão */
+}
+
+/* Estilo para Listas Inline */
+.list-inline {
+  list-style: none; /* Remove os pontos da lista */
+  padding-left: 0;
+  text-align: center;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+/* Estilo para Ícones das Redes Sociais */
+.list-inline a {
+  color: #333; /* Cor dos links */
+  font-size: 1.5rem; /* Tamanho maior para os ícones */
+}
+
+.list-inline a:hover {
+  color: #7a4b8d; /* Cor ao passar o mouse nos links */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-white {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .img-circle {
+    width: 80px; /* Ajusta o tamanho da imagem */
+  }
+
+  .list-inline > li {
+    padding: 0 10px; /* Ajusta o espaçamento entre os ícones */
+  }
+
+  .btn-blue {
+    padding: 8px 15px; /* Ajusta o tamanho do botão */
+  }
+}
